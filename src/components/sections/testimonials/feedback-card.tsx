@@ -1,0 +1,69 @@
+import { Quote, Star, TrendingUp } from "lucide-react";
+
+export function FeedbackCard() {
+  return (
+    <div className="flex h-full flex-col justify-between rounded-[24px] border border-[#DCE8F5] bg-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(20,45,75,0.06)]">
+      <div>
+        {/* Top Header: Five Orange Stars & Decorative Quote Mark */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1.5 text-[#F59E0B]">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-5 w-5 fill-[#F59E0B] stroke-[#F59E0B]" />
+            ))}
+          </div>
+
+          <Quote className="h-10 w-10 text-[#93C5FD]/50 rotate-180 stroke-[1.5]" />
+        </div>
+
+        {/* Review Quote Body with Highlight Pills */}
+        <p className="mt-5 text-left text-[17px] sm:text-[18.5px] lg:text-[19px] font-medium leading-[1.6] text-[#243B55]">
+          &ldquo;After we started link building with Tanot Solutions, they helped our CRM&apos;s
+          high-converting product page rank higher with an impressive{" "}
+          <span className="inline-block rounded-md bg-[#D9ECFF] px-2 py-0.5 font-bold text-[#0D6EFD]">
+            80% increase in traffic
+          </span>{" "}
+          and an equally exceptional{" "}
+          <span className="inline-block rounded-md bg-[#D9ECFF] px-2 py-0.5 font-bold text-[#0D6EFD]">
+            80% increase in
+          </span>{" "}
+          the total number of{" "}
+          <span className="inline-block rounded-md bg-[#D9ECFF] px-2 py-0.5 font-bold text-[#0D6EFD]">
+            sign-ups
+          </span>{" "}
+          every day.&rdquo;
+        </p>
+      </div>
+
+      {/* Subtle Divider */}
+      <div className="my-6 h-[1px] w-full bg-[#E5EEF7]" />
+
+      {/* Footer: Sandeep Das Profile & 80% Traffic Growth Metric Chip side by side */}
+      <div className="flex items-center justify-between gap-3 sm:gap-4">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-3.5">
+          <div className="flex h-12 w-12 shrink-0 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-gradient-to-br from-[#60A5FA] to-[#2563EB] text-white font-bold text-base shadow-sm ring-2 ring-[#E2EEF9]">
+            SD
+          </div>
+          <div className="flex min-w-0 flex-col text-left">
+            <span className="truncate text-[16px] sm:text-[18px] font-bold text-[#102544]">
+              Sandeep Das
+            </span>
+            <span className="truncate text-[12px] sm:text-[13.5px] text-[#657385] font-normal">
+              Marketing Manager, CRM SaaS Company
+            </span>
+          </div>
+        </div>
+
+        {/* Metric Chip */}
+        <div className="flex shrink-0 items-center gap-2 sm:gap-2.5 rounded-xl border border-[#DCE9F6] bg-[#F4F9FF] px-3 py-1.5 sm:px-3.5 sm:py-2 select-none shadow-xs">
+          <TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-[#0091FF] stroke-[2.4]" />
+          <div className="flex flex-col text-left leading-none">
+            <span className="text-[15px] sm:text-[17px] font-bold text-[#0091FF]">80%</span>
+            <span className="text-[9.5px] sm:text-[11px] font-semibold text-[#657385] mt-0.5">
+              Traffic Growth
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
