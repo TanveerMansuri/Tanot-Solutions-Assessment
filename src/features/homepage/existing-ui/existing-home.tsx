@@ -1,20 +1,20 @@
 import { Container } from "@/components/common/container";
-import { Text } from "@/components/common/text";
-
-import { ExistingHeroSection } from "./components/hero-section";
+import { PageShell } from "@/components/layout/page-shell";
+import { SiteHeader } from "@/components/layout/site-header";
+import { DesignTokensPreview } from "@/components/sections/design-tokens-preview";
+import { HeroSection } from "@/components/sections/hero";
 
 export function ExistingHomePage() {
   return (
-    <Container className="py-12">
-      <div className="flex flex-col gap-8">
-        <div>
-          <Text variant="h1">Concept 1: Existing UI Enhancement</Text>
-          <Text variant="muted" className="mt-2">
-            Targeted enhancements to the current live website architecture and aesthetic.
-          </Text>
-        </div>
-        <ExistingHeroSection />
-      </div>
-    </Container>
+    <PageShell>
+      <SiteHeader />
+      <main className="flex-1">
+        <HeroSection />
+        <DesignTokensPreview />
+      </main>
+      <footer className="border-t border-zinc-200/50 py-6 text-center text-xs text-zinc-500">
+        <Container>© 2026 Tanot Solutions. Enhanced Preview.</Container>
+      </footer>
+    </PageShell>
   );
 }
