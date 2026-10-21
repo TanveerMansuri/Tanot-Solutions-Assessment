@@ -28,42 +28,37 @@ export function FaqContent({ className }: FaqContentProps) {
         }}
       />
 
-      {/* FAQ Pill Badge */}
-      <div className="inline-flex items-center justify-center rounded-[10px] bg-[#D8EDFD] px-3.5 py-1 text-[13px] font-bold tracking-wide text-[#0284C7] shadow-xs select-none">
-        FAQ
-      </div>
-
       {/* Main Heading */}
       <Heading
         level={2}
-        className="mt-5 text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] font-bold tracking-tight text-[#0F172A] leading-[1.14] max-w-[500px]"
+        className="text-[34px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-bold tracking-tight text-[#0F172A] leading-[1.12] max-w-[500px]"
       >
         Questions to ask before hiring an SEO agency
       </Heading>
 
       {/* Supporting Copy 1 */}
-      <Text className="mt-5 text-[15px] sm:text-[16px] font-normal leading-[1.6] text-[#475E7B] max-w-[460px]">
+      <Text className="mt-5 sm:mt-6 text-[15.5px] sm:text-[16.5px] font-normal leading-[1.6] text-[#475E7B] max-w-[460px]">
         Can&rsquo;t find your answer? We&rsquo;re happy to walk you through it on a quick call.
       </Text>
 
       {/* Supporting Copy 2 */}
-      <div className="mt-5 flex flex-col text-[#475E7B] max-w-[460px]">
-        <span className="text-[14.5px] sm:text-[15.5px] font-medium text-[#334155]">
+      <div className="mt-6 flex flex-col text-[#475E7B] max-w-[460px]">
+        <span className="text-[15px] sm:text-[16px] font-bold text-[#1E293B]">
           Still deciding?
         </span>
-        <Text className="mt-1.5 text-[14.5px] sm:text-[15.5px] font-normal leading-[1.6] text-[#475E7B]">
+        <Text className="mt-1.5 text-[15px] sm:text-[16px] font-normal leading-[1.6] text-[#475E7B]">
           Get a free, no-obligation audit showing your website&rsquo;s current position and a
           step-by-step roadmap to 2X your traffic and leads.
         </Text>
       </div>
 
       {/* Prominent Blue CTA Button */}
-      <div className="mt-7 w-full sm:w-auto">
+      <div className="mt-8 w-full sm:w-auto">
         <ButtonLink
           href="#audit"
           variant="primary"
           size="lg"
-          className="h-[52px] w-full sm:w-auto rounded-[12px] bg-[#0284C7] hover:bg-[#0369A1] px-6 sm:px-7 text-[15.5px] sm:text-[16px] font-semibold text-white shadow-[0_4px_14px_rgba(2,132,199,0.25)] hover:shadow-[0_6px_20px_rgba(2,132,199,0.35)] transition-all flex items-center justify-center gap-2.5 active:scale-[0.99]"
+          className="h-[52px] sm:h-[54px] w-full sm:w-auto rounded-[12px] bg-[#0284C7] hover:bg-[#0369A1] px-6 sm:px-7 text-[15.5px] sm:text-[16px] font-semibold text-white shadow-[0_4px_14px_rgba(2,132,199,0.25)] hover:shadow-[0_6px_20px_rgba(2,132,199,0.35)] transition-all flex items-center justify-center gap-2.5 active:scale-[0.99]"
         >
           <span>Claim your free SEO growth plan</span>
           <ArrowRight className="h-4 w-4 stroke-[2.4] shrink-0" />

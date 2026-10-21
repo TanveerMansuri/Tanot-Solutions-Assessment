@@ -20,10 +20,10 @@ export function FaqCard({ item, isOpen, onToggle }: FaqCardProps) {
   return (
     <div
       className={cn(
-        "group w-full rounded-[16px] transition-all duration-200",
+        "group w-full rounded-[16px] sm:rounded-[18px] transition-all duration-200",
         "bg-white shadow-[0_2px_12px_rgba(15,23,42,0.03)]",
         isOpen
-          ? "border-2 border-[#38BDF8] shadow-[0_8px_24px_rgba(56,189,248,0.12)]"
+          ? "border border-[#38BDF8] shadow-[0_6px_20px_rgba(56,189,248,0.10)]"
           : "border border-[#E2E8F0] hover:border-[#CBD5E1] hover:shadow-[0_4px_16px_rgba(15,23,42,0.05)]"
       )}
     >
@@ -36,7 +36,7 @@ export function FaqCard({ item, isOpen, onToggle }: FaqCardProps) {
           onClick={onToggle}
           className={cn(
             "flex w-full items-center justify-between gap-4 p-5 sm:p-6 text-left select-none transition-colors",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7] focus-visible:ring-offset-2 rounded-[16px]"
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7] focus-visible:ring-offset-2 rounded-[16px] sm:rounded-[18px]"
           )}
         >
           <span
@@ -49,7 +49,7 @@ export function FaqCard({ item, isOpen, onToggle }: FaqCardProps) {
           </span>
           <div
             className={cn(
-              "flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-200",
+              "flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full transition-all duration-200",
               isOpen
                 ? "bg-[#E0F2FE] text-[#0284C7]"
                 : "bg-[#F0F7FF] text-[#0284C7] group-hover:bg-[#E0F2FE]"
@@ -75,7 +75,7 @@ export function FaqCard({ item, isOpen, onToggle }: FaqCardProps) {
         )}
       >
         <div className="overflow-hidden">
-          <div className="px-5 sm:px-6 pb-6 pt-1 text-[14px] sm:text-[15px] font-normal leading-[1.65] text-[#475569] border-t border-[#F1F5F9] mt-1 pt-4">
+          <div className="px-5 sm:px-6 pb-6 text-[14px] sm:text-[15px] font-normal leading-[1.65] text-[#475569] border-t border-[#F1F5F9] pt-4">
             {answer}
           </div>
         </div>
