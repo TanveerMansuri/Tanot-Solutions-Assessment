@@ -3,6 +3,7 @@ import { PageShell } from "@/components/layout/page-shell";
 import { SiteHeader } from "@/components/layout/site-header";
 import { AwardsSection } from "@/components/sections/awards";
 import { CaseStudySection } from "@/components/sections/case-study";
+import { FaqSection } from "@/components/sections/faq";
 import { FeaturedOnSection } from "@/components/sections/featured-on";
 import { FounderSection } from "@/components/sections/founder";
 import { HeroSection } from "@/components/sections/hero";
@@ -29,6 +30,7 @@ export function ExistingHomePage() {
         <FounderSection />
         <TeamSection />
         <FeaturedOnSection />
+        <FaqSection />
       </main>
       <footer className="border-t border-zinc-200/50 py-6 text-center text-xs text-zinc-500">
         <Container>© 2026 Tanot Solutions. Enhanced Preview.</Container>
