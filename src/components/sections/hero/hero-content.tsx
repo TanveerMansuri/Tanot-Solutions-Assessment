@@ -15,7 +15,7 @@ export function HeroContent() {
 
       <Heading
         level={1}
-        className="mt-6 mb-0 text-[50px] sm:text-[60px] md:text-[74px] lg:text-[70px] font-bold tracking-[-1.8px] text-[#111827] leading-[1.05] max-w-[650px]"
+        className="mt-6 mb-0 text-[48px] sm:text-[58px] md:text-[72px] lg:text-[68px] font-bold tracking-[-1.8px] text-[#111827] leading-[1.05] max-w-[650px]"
       >
         <span className="block sm:inline lg:block">Get Found on </span>
         <span className="block sm:inline lg:block text-[#168BCB]">Google, AI Search, </span>
