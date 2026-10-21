@@ -11,7 +11,7 @@ export function SiteHeader() {
       <Container className="flex h-[82px] items-center justify-between">
         <Logo />
         <NavigationMenu />
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <HeaderCTA />
           <MobileNavigation />
         </div>

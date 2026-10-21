@@ -16,7 +16,7 @@ export function HeroSection() {
         }}
       />
 
-      <Container className="relative z-10 max-w-[1280px] px-6 sm:px-8 lg:px-12">
+      <Container className="relative z-10 max-w-[1280px] px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 items-center justify-items-center lg:justify-items-stretch gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1fr)_auto]">
           <div className="w-full flex justify-center lg:justify-start">
             <HeroContent />

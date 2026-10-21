@@ -31,7 +31,7 @@ export function HeroContent() {
       <div className="mt-[30px] flex w-full flex-col gap-5">
         <ClutchRating />
 
-        <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
           <ButtonLink
             href="#strategy"
             variant="primary"
