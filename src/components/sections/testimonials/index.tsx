@@ -3,6 +3,7 @@ import { Heading } from "@/components/common/heading";
 import { Text } from "@/components/common/text";
 import { cn } from "@/lib/utils";
 
+import { ClientReviewCards } from "./client-review-cards";
 import { FeedbackCard } from "./feedback-card";
 import { TestimonialsEyebrow } from "./testimonials-eyebrow";
 import { VideoTestimonialCard } from "./video-testimonial-card";
@@ -61,6 +62,9 @@ export function TestimonialsHeader({ className }: TestimonialsHeaderProps) {
             <FeedbackCard />
           </div>
         </div>
+
+        {/* 3 Client Review Cards & Action CTAs */}
+        <ClientReviewCards />
       </Container>
     </section>
   );
