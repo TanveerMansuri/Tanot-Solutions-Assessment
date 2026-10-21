@@ -15,7 +15,7 @@ export function CaseStudySection({ className, imageSrc }: CaseStudySectionProps)
     <section
       id="case-study"
       aria-label="Featured Case Study"
-      className={cn("relative w-full overflow-hidden pt-12 pb-16 sm:pb-24", className)}
+      className={cn("relative w-full overflow-hidden bg-white pt-12 pb-16 sm:pb-24", className)}
     >
       <Container className="relative z-10 flex flex-col items-start max-w-[1360px] px-4 sm:px-6 lg:px-8">
         {/* Section Header with Eyebrow and Two-Part Gradient Heading */}

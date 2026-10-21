@@ -11,7 +11,7 @@ export interface WhyUsNarrativeProps {
 
 export function WhyUsNarrative({ className }: WhyUsNarrativeProps) {
   return (
-    <div className={cn("flex flex-col justify-between h-full text-left", className)}>
+    <div className={cn("flex flex-col text-left", className)}>
       {/* Main Heading, Description, and CTA Button */}
       <div className="flex flex-col items-start max-w-[520px]">
         {/* Main Heading with two-part gradient */}

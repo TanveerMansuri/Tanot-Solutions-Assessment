@@ -11,12 +11,12 @@ export function WhyUsGrid({ className }: WhyUsGridProps) {
   return (
     <div
       className={cn(
-        "grid w-full grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-5.5 items-stretch",
+        "grid w-full grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 lg:gap-4.5",
         className
       )}
     >
       {WHY_US_BENEFITS.map((benefit) => (
-        <div key={benefit.id} className="flex flex-col h-full">
+        <div key={benefit.id} className="flex flex-col">
           <WhyUsCard benefit={benefit} />
         </div>
       ))}
