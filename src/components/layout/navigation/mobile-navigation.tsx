@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+
 
 import Link from "next/link";
 
 import { Menu, X } from "lucide-react";
+import { createPortal } from "react-dom";
 
 import { ButtonLink } from "@/components/common/button-link";
 import { IconButton } from "@/components/common/icon-button";
+
+const emptySubscribe = () => () => {};
 
 export interface MobileNavigationProps {
   onOpenChange?: (open: boolean) => void;
@@ -15,6 +19,11 @@ export interface MobileNavigationProps {
 
 export function MobileNavigation({ onOpenChange }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   useEffect(() => {
     onOpenChange?.(isOpen);
@@ -47,21 +56,24 @@ export function MobileNavigation({ onOpenChange }: MobileNavigationProps) {
         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </IconButton>
 
-      {isOpen && (
-        <div className="fixed inset-x-0 top-[82px] bottom-0 z-50 flex flex-col bg-white/98 p-6 backdrop-blur-xl dark:bg-zinc-950/98 shadow-xl">
+      {isOpen && mounted && createPortal(
+        <div
+          className="fixed inset-x-0 top-[82px] bottom-0 z-[9999] flex flex-col bg-white p-6 shadow-2xl border-t border-zinc-200 overflow-y-auto"
+          style={{ backgroundColor: "#FFFFFF" }}
+        >
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-xl px-4 py-3 text-base font-semibold text-zinc-800 hover:bg-blue-50 hover:text-blue-600 dark:text-zinc-200 dark:hover:bg-zinc-900"
+                className="rounded-xl px-4 py-3 text-base font-semibold text-zinc-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          <div className="mt-8 border-t border-zinc-200 pt-6 dark:border-zinc-800">
+          <div className="mt-8 border-t border-zinc-200 pt-6">
             <ButtonLink
               href="#audit"
               variant="primary"
@@ -72,7 +84,8 @@ export function MobileNavigation({ onOpenChange }: MobileNavigationProps) {
               Get Free Audit
             </ButtonLink>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

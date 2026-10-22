@@ -24,7 +24,7 @@ export function ModernSiteHeader() {
     <header
       ref={headerRef}
       className={cn(
-        "sticky top-0 z-40 w-full border-b border-[#D7E5DE] bg-white/98 shadow-xs",
+        "sticky top-0 z-50 w-full border-b border-[#D7E5DE] bg-white shadow-xs",
         "backdrop-blur-md will-change-transform motion-reduce:transform-none"
       )}
     >
