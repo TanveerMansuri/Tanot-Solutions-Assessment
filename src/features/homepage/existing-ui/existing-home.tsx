@@ -1,4 +1,4 @@
-import { Container } from "@/components/common/container";
+import { Footer } from "@/components/layout/footer";
 import { PageShell } from "@/components/layout/page-shell";
 import { SiteHeader } from "@/components/layout/site-header";
 import { AwardsSection } from "@/components/sections/awards";
@@ -14,6 +14,7 @@ import { TeamSection } from "@/components/sections/team";
 import { TestimonialsHeader } from "@/components/sections/testimonials";
 import { TrustedPartnersHeader } from "@/components/sections/trusted-partners";
 import { WhyUsSection } from "@/components/sections/why-us";
+import { SeoCtaSection } from "@/features/homepage/components/seo-cta";
 
 export function ExistingHomePage() {
   return (
@@ -33,10 +34,9 @@ export function ExistingHomePage() {
         <FeaturedOnSection />
         <FaqSection />
         <BlogSection />
+        <SeoCtaSection />
       </main>
-      <footer className="border-t border-zinc-200/50 py-6 text-center text-xs text-zinc-500">
-        <Container>© 2026 Tanot Solutions. Enhanced Preview.</Container>
-      </footer>
+      <Footer />
     </PageShell>
   );
 }
