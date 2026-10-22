@@ -6,17 +6,17 @@ export interface ServicesEyebrowProps {
 
 export function ServicesEyebrow({ className }: ServicesEyebrowProps) {
   return (
-    <div className={cn("flex w-full items-center justify-center gap-3 sm:gap-4", className)}>
+    <div className={cn("flex w-full items-center justify-center gap-4 sm:gap-6", className)}>
       <div
         aria-hidden="true"
-        className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#76B0EB] to-[#168BCB]"
+        className="h-[1px] w-12 sm:w-20 md:w-28 bg-gradient-to-r from-transparent via-[#C3DCF7] to-[#A3CDF8]"
       />
-      <span className="text-[12.5px] sm:text-[14px] font-bold uppercase tracking-[0.14em] text-[#168BCB] select-none">
+      <span className="inline-flex items-center justify-center rounded-full bg-[#D9ECFF] px-4 py-1.5 sm:px-5 sm:py-2 text-[13px] sm:text-[14px] font-bold uppercase tracking-wider text-[#168BCB] leading-none select-none shadow-[0_1px_2px_rgba(22,139,203,0.06)]">
         OUR SERVICES
       </span>
       <div
         aria-hidden="true"
-        className="h-[1px] w-8 sm:w-12 bg-gradient-to-l from-transparent via-[#76B0EB] to-[#168BCB]"
+        className="h-[1px] w-12 sm:w-20 md:w-28 bg-gradient-to-l from-transparent via-[#C3DCF7] to-[#A3CDF8]"
       />
     </div>
   );

@@ -9,10 +9,15 @@ import { Menu, X } from "lucide-react";
 import { ButtonLink } from "@/components/common/button-link";
 import { IconButton } from "@/components/common/icon-button";
 
-export function MobileNavigation() {
+export interface MobileNavigationProps {
+  onOpenChange?: (open: boolean) => void;
+}
+
+export function MobileNavigation({ onOpenChange }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    onOpenChange?.(isOpen);
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -21,7 +26,7 @@ export function MobileNavigation() {
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isOpen]);
+  }, [isOpen, onOpenChange]);
 
   const navLinks = [
     { label: "Home", href: "#home" },
@@ -43,7 +48,7 @@ export function MobileNavigation() {
       </IconButton>
 
       {isOpen && (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-50 flex flex-col bg-white/95 p-6 backdrop-blur-xl dark:bg-zinc-950/95">
+        <div className="fixed inset-x-0 top-[82px] bottom-0 z-50 flex flex-col bg-white/98 p-6 backdrop-blur-xl dark:bg-zinc-950/98 shadow-xl">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link

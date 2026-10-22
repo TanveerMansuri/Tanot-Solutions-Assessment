@@ -35,7 +35,7 @@ export function BlogCarousel({ className }: BlogCarouselProps) {
           onClick={handlePrev}
           aria-label="Previous articles"
           className={cn(
-            "hidden md:flex absolute -left-5 lg:-left-7 z-20 h-10 w-10 lg:h-11 lg:w-11 items-center justify-center rounded-full select-none",
+            "hidden md:flex lg:hidden absolute -left-5 z-20 h-10 w-10 items-center justify-center rounded-full select-none",
             "bg-[#F0F7FF] text-[#0284C7] shadow-[0_2px_8px_rgba(2,132,199,0.12)] border border-[#BAE6FD]",
             "hover:bg-[#E0F2FE] hover:scale-105 active:scale-95 transition-all duration-200",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7] focus-visible:ring-offset-2"
@@ -73,7 +73,7 @@ export function BlogCarousel({ className }: BlogCarouselProps) {
           onClick={handleNext}
           aria-label="Next articles"
           className={cn(
-            "hidden md:flex absolute -right-5 lg:-right-7 z-20 h-10 w-10 lg:h-11 lg:w-11 items-center justify-center rounded-full select-none",
+            "hidden md:flex lg:hidden absolute -right-5 z-20 h-10 w-10 items-center justify-center rounded-full select-none",
             "bg-[#F0F7FF] text-[#0284C7] shadow-[0_2px_8px_rgba(2,132,199,0.12)] border border-[#BAE6FD]",
             "hover:bg-[#E0F2FE] hover:scale-105 active:scale-95 transition-all duration-200",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7] focus-visible:ring-offset-2"
@@ -83,8 +83,11 @@ export function BlogCarousel({ className }: BlogCarouselProps) {
         </button>
       </div>
 
-      {/* Pagination Dots Row */}
-      <div className="mt-8 sm:mt-9 flex items-center justify-center gap-2 select-none" role="tablist">
+      {/* Pagination Dots Row: Hidden on Desktop (>=1024px) since all 3 cards are visible simultaneously */}
+      <div
+        className="mt-8 sm:mt-9 flex lg:hidden items-center justify-center gap-2 select-none"
+        role="tablist"
+      >
         {BLOG_POSTS.map((post, idx) => (
           <button
             key={post.id}

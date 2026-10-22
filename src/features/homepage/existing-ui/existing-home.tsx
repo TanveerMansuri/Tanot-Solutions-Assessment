@@ -18,12 +18,13 @@ import { SeoCtaSection } from "@/features/homepage/components/seo-cta";
 
 export function ExistingHomePage() {
   return (
-    <PageShell>
+    <div className="relative min-h-screen w-full flex flex-col">
       <SiteHeader />
-      <main className="flex-1">
-        <HeroSection />
-        <StatsBar />
-        <TrustedPartnersHeader />
+      <PageShell>
+        <main className="flex-1">
+          <HeroSection />
+          <StatsBar />
+          <TrustedPartnersHeader />
         <TestimonialsHeader />
         <OurServicesSection />
         <CaseStudySection />
@@ -38,5 +39,6 @@ export function ExistingHomePage() {
       </main>
       <Footer />
     </PageShell>
+    </div>
   );
 }
